@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 
 import { DiscogsService } from '../discogs.service';
@@ -9,14 +10,21 @@ import { DiscogsService } from '../discogs.service';
   templateUrl: './album-detail.component.html',
   styleUrls: ['./album-detail.component.css']
 })
-export class AlbumDetailComponent {
+export class AlbumDetailComponent implements OnInit{
   release: any;
+  id: string;
 
   constructor(
-    private discogService: DiscogsService) {}
+    private discogService: DiscogsService,
+    private route: ActivatedRoute
+  ) {
+    this.id = '';
+  }
 
   ngOnInit() {
-    this.discogService.getRelease(20285482).subscribe((data) => {
+    this.id = this.route.snapshot.paramMap.get('id') ?? '';
+    console.log(this.id)
+    this.discogService.getRelease(this.id).subscribe((data) => {
       this.release = data
     })
   }

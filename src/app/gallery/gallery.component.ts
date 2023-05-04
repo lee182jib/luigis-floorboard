@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ALBUMS } from '../album-list';
 
+
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -8,4 +9,5 @@ import { ALBUMS } from '../album-list';
 })
 export class GalleryComponent {
   albums = ALBUMS;
+  
 }

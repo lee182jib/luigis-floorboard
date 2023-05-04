@@ -5,7 +5,8 @@ import { AlbumDetailComponent } from './album-detail/album-detail.component';
 
 const routes: Routes = [
   { path: 'home', component: GalleryComponent },
-  { path: 'detail/:id', component: AlbumDetailComponent }
+  { path: 'detail/:id', component: AlbumDetailComponent },
+
 ];
 
 @NgModule({

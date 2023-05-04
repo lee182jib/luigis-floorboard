@@ -1,0 +1,24 @@
+<div class="container-fluid">
+
+
+
+  <div class="row">
+    <div *ngFor="let album of albums" class="col-sm-6 col-md-4 col-lg-3">
+      <figure>
+        <a routerLink="/details/{{ album.id }}">
+        <img src="{{ album.image }}" class="img-thumbnail">
+        <figcaption>
+          <h4>{{ album.title }}</h4>
+          <p>Some text here</p>
+        </figcaption>
+      </a>
+      </figure>
+    </div>
+   
+        
+  
+
+    
+   
+  </div>
+</div>

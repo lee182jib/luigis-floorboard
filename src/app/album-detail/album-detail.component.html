@@ -1,10 +1,12 @@
-album details
-<p>{{ release.artists[0].name }} - {{ release.year }}</p>
-<h1>{{ release.title }}</h1>
-<ul>
-  <li *ngFor="let track of release.tracklist">
-    {{track.position}} {{ track.title }}
+<h1 class="text-center">{{ release.title }}</h1>
+<h3 class="text-center">{{ release.artists[0].name }} - {{ release.year }}</h3>
+
+<div class="container">
+<ul class="list-group col-sm-6 col-md-6 col-lg-6">
+  <p>Track List</p>
+  <li class="list-group-item" *ngFor="let track of release.tracklist">
+   {{track.position}} - {{ track.title }}
   </li>
 </ul>
-
+</div>
 

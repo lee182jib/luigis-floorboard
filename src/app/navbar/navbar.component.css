@@ -1,5 +1,19 @@
+.navbar { 
+  background-color: #EE6C4D;
+}
+
 .navbar-brand {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+h1 {
+  font-size: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+}
+
+li {
+  font-family: 'Outfit', sans-serif;
 }
